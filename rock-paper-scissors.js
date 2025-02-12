@@ -53,4 +53,12 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+//Executes rounds for best to 5 game
+function playGame(){
+    while(playerScore+computerScore<5){
+        playRound(getHumanChoice(), getComputerChoice());
+        console.log("Computer: " + computerScore + " You: " + playerScore);
+    }
+}
+
+playGame();
